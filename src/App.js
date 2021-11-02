@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
-import MovieList from './src/MovieList';
+import MovieList from './components/MovieList';
 
 const App = () => {
-
   const [movies, setmovies] = useState([
     {
       "Title": "Star Wars",
@@ -30,8 +29,10 @@ const App = () => {
   ]);
 
   return (
-    <div>
-      <MovieList movies={movies} />
+    <div className='container-fluid movie-app'>
+      <div className='row'>
+        <MovieList movies={movies} />
+      </div>
     </div>
   );
 };
